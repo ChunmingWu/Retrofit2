@@ -2,7 +2,7 @@ package lotcom.zhpan.idea.net.common;
 
 
 import io.reactivex.Observable;
-import lotcom.zhpan.idea.net.token.TokenResponse;
+import lotcom.zhpan.idea.net.token.RefreshTokenResponse;
 import okhttp3.ResponseBody;
 import retrofit2.http.GET;
 import retrofit2.http.Streaming;
@@ -18,5 +18,5 @@ public interface CommonService {
     Observable<ResponseBody> download(@Url String url);
 
     @GET("refresh_token")
-    Observable<TokenResponse> refreshToken();
+    Observable<RefreshTokenResponse> refreshToken();
 }

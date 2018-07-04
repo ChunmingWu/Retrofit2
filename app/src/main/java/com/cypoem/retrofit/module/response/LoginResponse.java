@@ -1,6 +1,8 @@
 package com.cypoem.retrofit.module.response;
 
 
+import com.cypoem.retrofit.module.bean.UserBean;
+
 /**
  * Created by zhpan on 2017/10/25.
  * Description:
@@ -11,6 +13,16 @@ public class LoginResponse {
     private String refresh_token;
     private String expired;
     private String refresh_secret;
+
+    private UserBean user;
+
+    public UserBean getUser() {
+        return user;
+    }
+
+    public void setUser(UserBean user) {
+        this.user = user;
+    }
 
     public String getRefresh_secret() {
         return refresh_secret;

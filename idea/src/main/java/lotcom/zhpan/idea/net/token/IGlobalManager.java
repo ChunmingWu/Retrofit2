@@ -10,5 +10,7 @@ public interface IGlobalManager {
     /**
      * Exit the login state.
      */
-    void exitLogin();
+    void logout();
+
+    void tokenRefresh(RefreshTokenResponse response);
 }
