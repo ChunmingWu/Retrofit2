@@ -44,6 +44,7 @@ public abstract class DefaultObserver<T> implements Observer<T> {
     @Override
     public void onNext(T response) {
         onSuccess(response);
+        onFinish();
     }
 
 
@@ -68,6 +69,7 @@ public abstract class DefaultObserver<T> implements Observer<T> {
         } else {
             onException(UNKNOWN_ERROR);
         }
+        onFinish();
     }
 
     @Override
@@ -139,6 +141,10 @@ public abstract class DefaultObserver<T> implements Observer<T> {
                 ToastUtils.show(R.string.unknown_error, Toast.LENGTH_SHORT);
                 break;
         }
+    }
+
+    private void onFinish() {
+
     }
 
     /**
